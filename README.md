@@ -14,7 +14,7 @@ This project is structured using best practices to utilize the following core Py
 
 * **Pickling (`pickle` module):** Used to convert employee data (objects/dictionaries) into a byte stream for writing to a file (`employees.dat`).
 * **Unpickling (`pickle` module):** Used to reconstruct the data structure from the file back into memory.
-* **Modules & Functions:** The system is modularized, with separate files/functions handling distinct operations (e.g., `EmployeeAdd.py`, `EmployeeDelete.py`) for clean, reusable code.
+* **Modules & Functions:** The system is modularized, with separate files/functions handling distinct operations (e.g., `employee_add.py`, `employee_delete.py`) for clean, reusable code.
 * **Error Handling:** Robust `try...except` blocks are implemented to handle critical exceptions like `FileNotFoundError` (for the first run) and `EOFError` (for empty/corrupted data files) during unpickling.
 
 ---
@@ -25,12 +25,12 @@ The application is broken down into modular files for clarity:
 
 | File Name | Purpose |
 | :--- | :--- |
-| `EmpMenu.py` | Contains the main command-line interface (CLI) and menu loop logic. |
-| `EmployeeMainProject.py` | The primary execution file, which imports and calls the menu logic. |
-| `EmployeeAdd.py` | Handles the logic for collecting and saving new employee data. |
-| `EmployeeDelete.py` | Handles the logic for removing an existing employee record. |
-| `EmployeeUpdate.py` | Handles the logic for modifying existing employee data. |
-| `EmployeeView.py` | Handles the logic for displaying all stored employee records. |
+| `emp_menu.py` | Contains the main command-line interface (CLI) and menu loop logic. |
+| `employee_mainProject.py` | The primary execution file, which imports and calls the menu logic. |
+| `employee_add.py` | Handles the logic for collecting and saving new employee data. |
+| `employee_delete.py` | Handles the logic for removing an existing employee record. |
+| `employee_update.py` | Handles the logic for modifying existing employee data. |
+| `employee_view.py` | Handles the logic for displaying all stored employee records. |
 | `employees.dat` | **(Hidden/Ignored by Git)** The binary file used for data storage. |
 
 ---
@@ -55,3 +55,4 @@ The application is broken down into modular files for clarity:
 * Implement a dedicated `Employee` **Class** instead of using dictionaries for better object-oriented practice.
 * Add data validation to ensure user input (like ID) is in the correct format.
 * Migrate data storage to a simple text file (CSV) for comparison with the `pickle` method.
+
